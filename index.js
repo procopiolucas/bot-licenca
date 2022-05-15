@@ -1,9 +1,10 @@
 const Discord = require("discord.js")
 const client = new Discord.Client({intents: 32767, disableMentions: "all"})
 const config = require("./config.json")
+const pv = require("./Private.json")
 
 client.prefix = config.prefix
-client.token = process.env.token
+client.token = pv.token
 
 client.on('ready', () => {
   console.log("on")
